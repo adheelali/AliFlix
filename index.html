@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/61ee4ff276.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <figure class="personal__logo-wrapper">
+          <img
+            class="personal-logo"
+            src="assets/954d0dc1eb2946868d4e87b87aa4a27b.png"
+            alt=""
+          />
+        </figure>
+        <ul class="header__links">
+          <li class="header__link input--wrapper">
+            <input
+              class="input"
+              type="text"
+              placeholder="Search movies"
+              onchange="onSearchMovie(event)"
+            />
+            <button class="button" onclick="search()">
+              <i class="header__link fas fa-search"></i>
+            </button>
+          </li>
+          <li class="header__link cursor-none">Home</li>
+        </ul>
+      </header>
+      <main>
+        <h1 class="movie__searched">
+          movie Searched: <span class="movie__searched--name"> </span>
+        </h1>
+        <div class="card-list">
+               
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
