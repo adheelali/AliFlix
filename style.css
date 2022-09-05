@@ -187,6 +187,12 @@ PHONES
 
 */
 
+@media (max-width:815px) {
+  .card {
+    width: 50%;
+  }
+}
+
 @media (max-width:540px) {
   .container {
     padding: 0 8px;
@@ -194,13 +200,13 @@ PHONES
   .header__link {
     gap: 10px;
   }
-  .header__link:nth-child(2) {
-    display: none;
-  }
   .personal__logo-wrapper {
     width: 90px;
   }
   .personal-logo {
     transform: scale(3) translateY(0);
+  }
+  .card {
+    width: 100%;
   }
 }
