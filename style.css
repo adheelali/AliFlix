@@ -14,6 +14,14 @@
   font-size: 3rem;
 }
 
+button {
+  border: none;
+}
+
+body {
+  background-color: black;
+}
+
 img {
   width: 100%;
   filter: brightness(150%);
@@ -23,6 +31,9 @@ img {
   padding: 0 1rem;
 }
 
+.cursor-none {
+  cursor: not-allowed;
+}
 
 input {
   border: 2px solid black;
@@ -36,10 +47,6 @@ input {
 
 input:focus {
   border: 2px solid red;
-}
-
-.cursor-none {
-  cursor: not-allowed;
 }
 
 .button {
@@ -80,13 +87,6 @@ input:focus {
   }
 }
 
-button {
-  border: none;
-}
-
-body {
-  background-color: black;
-}
 /*
 
 header
@@ -181,27 +181,11 @@ MAIN
   margin-bottom: 4px;
 }
 
+/* 
 
+PHONES
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 @media (max-width:540px) {
   .container {

@@ -1,5 +1,3 @@
-// https://www.omdbapi.com/?i=tt3896198&apikey=c968a92
-
 const cardListEl = document.querySelector('.card-list')
 const buttonEl = document.querySelector('.button')
 const inputEl = document.querySelector('.input')
