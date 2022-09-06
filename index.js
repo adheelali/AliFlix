@@ -43,6 +43,7 @@ async function main(movieData) {
     cardListEl.innerHTML = jsonData.Search.map((movie) => cardHTML(movie)).join('');
     mainSearch = true
 }  
+
 if (mainSearch) {
   main();
   mainSearch = false
@@ -52,12 +53,12 @@ function cardHTML(movie) {
    return `
    <div class="card">
     <figure class="card__img--wrapper">
-    <img src="${movie.Poster}" />
+     <img class="card__img" src="${movie.Poster}" />
     </figure>
     <div class="card__info">
       <h2 class="card__title">Title: ${movie.Title}</h2>
       <h3 class="card__type">Type: ${movie.Type}</h2>
-      <h3 class="card__year">Year: ${movie.Year}</h3>
+      <h3 >Year: ${movie.Year}</h3>
     </div>  
-  </div>  `
+   </div>  `
 }

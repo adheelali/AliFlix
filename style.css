@@ -156,7 +156,8 @@ MAIN
 }
 
 .card {
-  max-width: max-content;
+  max-width: 500px;
+  max-height: fit-content;
   border-radius: 5%;
   padding: 24px;
   margin: 0 32px 32px 32px;
@@ -165,10 +166,20 @@ MAIN
 
 .card__info {
   color: white;
+  width: fit-content;
 }
 
 .card__img--wrapper {
-  margin-bottom: 8px;
+  margin: 0 auto 16px;
+  width: fit-content;
+}
+
+.card__img {
+  filter: brightness(100%);
+  max-height: fit-content;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .card__title {
@@ -206,5 +217,9 @@ PHONES
   }
   .card {
     width: 100%;
+  }
+  .card__title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
   }
 }
