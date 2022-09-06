@@ -4,7 +4,7 @@ const inputEl = document.querySelector('.input')
 const searchedEl = document.querySelector('.movie__searched--name')
 let executed = false;
 let inputSearch = false;
-
+let mainSearch = false
 
 function onSearchMovie(event) {
   const movieData = event.target.value;
@@ -41,20 +41,23 @@ async function main(movieData) {
     const jsonData = await data.json();
     console.log(jsonData)
     cardListEl.innerHTML = jsonData.Search.map((movie) => cardHTML(movie)).join('');
+    mainSearch = true
 }  
-main();
-
+if (mainSearch) {
+  main();
+  mainSearch = false
+}
 
 function cardHTML(movie) {
    return `
    <div class="card">
     <figure class="card__img--wrapper">
-    <img src="${movie.poster}" />
+    <img src="${movie.Poster}" />
     </figure>
     <div class="card__info">
-      <h2 class="card__title">Title: ${movie.title}</h2>
-      <h3 class="card__type">Type: ${movie.type}</h2>
-      <h3 class="card__year">Year: ${movie.year}</h3>
+      <h2 class="card__title">Title: ${movie.Title}</h2>
+      <h3 class="card__type">Type: ${movie.Type}</h2>
+      <h3 class="card__year">Year: ${movie.Year}</h3>
     </div>  
   </div>  `
 }
