@@ -156,7 +156,6 @@ MAIN
 }
 
 .card {
-  width: 25%;
   max-width: max-content;
   border-radius: 5%;
   padding: 24px;
@@ -166,7 +165,6 @@ MAIN
 
 .card__info {
   color: white;
-  padding: 1%;
 }
 
 .card__img--wrapper {
