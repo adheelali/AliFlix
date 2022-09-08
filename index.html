@@ -30,7 +30,7 @@
               onchange="onSearchMovie(event)"
             />
             <button class="button" onclick="search()">
-              <i class="header__link fas fa-search"></i>
+              <i class="fas fa-search header__link"></i>
             </button>
           </li>
         </ul>
@@ -40,11 +40,15 @@
           movie Searched: <span class="movie__searched--name"> </span>
         </h1>
         <div class="card-list">
-               
+          <i class="fas fa-spinner"></i>
+          <figure class="not-found__img--wrapper">
+            <img
+              src="./assets/img_noresults_movies.png"
+            />
+          </figure>
         </div>
       </main>
     </div>
   </body>
   <script src="index.js"></script>
 </html>
-<!--  -->

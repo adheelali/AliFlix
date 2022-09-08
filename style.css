@@ -87,6 +87,34 @@ input:focus {
   }
 }
 
+
+.fa-spinner {
+  position: absolute;
+  color: rgba(221, 9, 9, 0.739);
+  font-size: 5rem;
+  animation: spin 800ms infinite linear;
+  display: none !important;
+}
+
+.not-found__img--wrapper{
+  width: 200px;
+  aspect-ratio: 1;
+  display: none !important;
+}
+
+.display-block {
+  display: block !important;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 360deg;
+  }
+}
+
+
+
+
 /*
 
 header
@@ -149,7 +177,8 @@ MAIN
 }
 
 .card-list {
-  margin-top: 48px;
+  position: relative;
+  margin-top: 72px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
