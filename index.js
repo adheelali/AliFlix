@@ -13,7 +13,7 @@ function onSearchMovie(event) {
   inputSearch = true;
   executed = true;
   spinnerEl.classList += " display-block";
-  // movieNotFoundEl.classList.remove('display-block')
+  movieNotFoundEl.classList.remove('display-block')
   search(movieData);
 }
 
@@ -44,14 +44,14 @@ async function main(movieData) {
     `https://www.omdbapi.com/?i=tt3896198&apikey=c968a92&s=${movieData}`
   );
   const jsonData = await data.json();
+  if (jsonData.Response = "False") {
+    movieNotFoundEl.classList += " display-block";
+  }
   console.log(jsonData);
   spinnerEl.classList.remove("display-block");
   cardListEl.innerHTML = jsonData.Search.map((movie) => cardHTML(movie)).join(
     ""
   );
-  if (jsonData.Response = "False") {
-    movieNotFoundEl.classList += " display-block";
-  }
 }
 
 function cardHTML(movie) {

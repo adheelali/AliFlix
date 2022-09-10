@@ -106,6 +106,7 @@ input:focus {
   display: block !important;
 }
 
+
 @keyframes spin {
   0% {
     rotate: 360deg;
