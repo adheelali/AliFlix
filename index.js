@@ -3,7 +3,6 @@ const buttonEl = document.querySelector(".button");
 const inputEl = document.querySelector(".input");
 const searchedEl = document.querySelector(".movie__searched--name");
 const spinnerEl = document.querySelector(".fa-spinner");
-const movieNotFoundEl = document.querySelector(".not-found__img--wrapper");
 let executed = false;
 let inputSearch = false;
 
@@ -13,7 +12,6 @@ function onSearchMovie(event) {
   inputSearch = true;
   executed = true;
   spinnerEl.classList += " display-block";
-  movieNotFoundEl.classList.remove('display-block')
   search(movieData);
 }
 
@@ -44,14 +42,23 @@ async function main(movieData) {
     `https://www.omdbapi.com/?i=tt3896198&apikey=c968a92&s=${movieData}`
   );
   const jsonData = await data.json();
-  if (jsonData.Response = "False") {
-    movieNotFoundEl.classList += " display-block";
+  if ((jsonData.Response = "False")) {
+    cardListEl.innerHTML = movieNotFound();
   }
   console.log(jsonData);
   spinnerEl.classList.remove("display-block");
-  cardListEl.innerHTML = jsonData.Search.map((movie) => cardHTML(movie)).join(
-    ""
-  );
+  if ((jsonData.Response = "True")) {
+    cardListEl.innerHTML = jsonData.Search.map((movie) => cardHTML(movie)).join(
+      ""
+    );
+  }
+}
+
+function movieNotFound() {
+  return `
+  <figure class="not-found__img--wrapper">
+    <img src="./assets/img_noresults_movies.png" />
+  </figure>`;
 }
 
 function cardHTML(movie) {

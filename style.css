@@ -99,7 +99,6 @@ input:focus {
 .not-found__img--wrapper{
   width: 200px;
   aspect-ratio: 1;
-  display: none !important;
 }
 
 .display-block {
