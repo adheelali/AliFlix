@@ -5,6 +5,7 @@ const searchedEl = document.querySelector(".movie__searched--name");
 const spinnerEl = document.querySelector(".fa-spinner");
 let executed = false;
 let inputSearch = false;
+let mainCount = 0;
 
 function onSearchMovie(event) {
   const movieData = event.target.value;
@@ -36,6 +37,21 @@ function search(movieData) {
     inputSearch = false;
   }, 700);
 }
+
+async function userInterface() {
+  if ((mainCount == 0)) {
+    const data = await fetch(
+      `https://www.omdbapi.com/?i=tt3896198&apikey=c968a92&s=marvel`
+    );
+    const jsonData = await data.json();
+    console.log(jsonData)
+    cardListEl.innerHTML = jsonData.Search.map((movie) => cardHTML(movie)).join(
+      ""
+    );
+  }
+  mainCount++;
+}
+userInterface()
 
 async function main(movieData) {
   const data = await fetch(
