@@ -253,4 +253,7 @@ PHONES
     font-size: 1.5rem;
     margin-bottom: 16px;
   }
+  .not-found__img--wrapper {
+    filter: none;
+  }
 }
